@@ -1,0 +1,542 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+html {
+    font-family: "Bellota";
+    scroll-behavior: smooth;
+}
+
+.clear {
+    clear: both;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+body {
+    overflow-x:hidden;
+}
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgb(51, 50, 50)
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(207, 178, 46); 
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+
+/*
+1.vị trí
+2.kích thước
+3.màu sắc
+4.kiểu dáng (kiểu chữ,hình tròn,vuông,..)
+*/
+
+/* BEGIN HEADER */
+#header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 49px;
+    background-color: rgb(51, 50, 50);
+    border-style: inset;
+    border-width: 1px;
+    border-color: white;
+    
+}
+
+#nav li a {
+    line-height: 48px;
+    text-decoration: none; /* delete underline */
+    font-size:  22px;
+    padding: 0 25px;
+    display: block;
+    border-style: solid ;
+    border-width: 1px;
+    border-color: white;
+    border-bottom: none;
+    border-top: none;
+    
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav, .subnav {
+    list-style-type: none;
+}
+
+#nav > li {
+    display: inline-block; /* Để list thành hàng ngang */
+}
+#nav li {
+    position: relative;
+}
+
+#nav li .subnav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 5px 6px 5px gray;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav .subnav  a {
+    font-size: 21px;
+    color:rgb(51, 50, 50) ;
+    line-height: 40px;
+    border-style:groove;
+    border-color: white;
+    border-bottom: none;
+}
+
+#nav > li > a {
+    color: white;
+    text-transform: uppercase;
+}
+
+#nav .nav-arrow-down {
+    font-size: 16px;
+    
+}
+
+
+#nav .subnav li:hover a , 
+#nav > li:hover > a {
+    color: rgb(51, 50, 50);
+    background-color: rgb(238, 198, 23);
+    
+}
+
+#header .search-button {
+    float: right;
+    padding: 0 32px; 
+    color: white;
+    line-height: 48px;
+    font-size: 22px;
+    display: block;
+    border-style: solid ;
+    border-width: 1px;
+    border-bottom: none;
+    border-right: none;
+    border-top: none;
+}
+
+#header .search-button:hover {
+    background-color: rgb(238, 198, 23);
+    color:black;
+    cursor: pointer;
+}
+/* END HEADER */
+/* BEGIN HOME */
+#home {
+    padding-top: 48px;
+    height: 100vh;
+    background-image: 
+    url(/assets/img/snow5.gif),
+    url(/assets/img/homee.jpg);   
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;  
+    justify-content: center; 
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+#home .text-content {
+    font-weight: 500;
+    font-size: 30px;
+    padding-bottom: 70px;
+    
+}
+
+#home .text-heading {
+    font-size: 55px;
+    color: #a8308f;
+    font-family: "Midnight Minutes";
+    
+}
+
+#home .text-description {
+    margin-top: 10px;
+}
+
+#home .highlight-heading {
+    color: rgb(231, 216, 131);
+    background-image: url(/assets/img/shine2.gif);
+    background-position: center;
+    background-size: contain;
+}
+#home .highlight-heading:hover {
+    color: gold;
+    /* animation: blur.75s ease-out infinite;
+  background-image: url(/my-portfolio/assets/img/shine.gif);
+  background-position: center;
+  background-size: cover;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  color: transparent; */
+ 
+}
+/* END HOME */
+/* BEGIN ABOUT-ME */
+#about-me {
+    background-color: rgb(32, 32, 32);
+    /* display: inline-block; */
+}
+
+.title {
+    padding: 60px 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 38px;
+    color: white;
+    font-family: "Madeline";
+}
+
+.highlight-title {
+    color:rgb(238, 198, 23);
+    display: inline-block;
+}
+
+.personal-info {
+    width: 60vw;
+    font-family: Arial, Helvetica;
+    color: white;
+    display: inline-block;
+    padding-left: 20px !important;
+    /* position: absolute; */
+}
+
+.personal-info .personal-info-title {
+    font-size: 25px;
+    padding-bottom: 25px;
+    text-decoration: underline;
+}
+
+.personal-info .info {
+    font-size: 20px;
+    width: 350px;
+    display: inline-block;
+    padding-bottom: 25px;
+    /* padding-right: 60px; */
+   
+}
+
+.personal-info .quote {
+    width: 650px !important;
+    text-align: center;
+    padding-top: 10px;
+    font-style: italic;
+    font-family: "Bellota";
+    color: rgb(238, 198, 23);
+    
+}
+
+
+#about-me .my-pic {
+    width: 35vw;
+    height: 300px;
+    display: inline-block;
+    position: block;
+    background-color: red;
+    border-radius: 8px;
+    
+}
+
+.skills {
+    color: white;
+    /* padding-left: 20px !important; */
+    font-family: Arial, Helvetica;
+    
+}
+.skill-list {
+    padding-bottom: 60px;
+}
+.skills .skill-title {
+    padding-left: none !important;
+    font-size: 25px;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 50px;
+    text-decoration: underline;
+    
+}
+
+.skills .skill-item {
+    float: left;
+    width: 20%;
+    text-align: center;
+    
+}
+
+.skill-item .skill-name {
+    font-size: 15px;
+    font-weight: bold;
+}
+/* END ABOUT-ME */
+
+/* BEGIN FAVORITES */
+#favorites {  
+    width: 100vw;
+    background-color: rgb(48, 48, 48);
+    background-image: url(/assets/img/favor2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;    
+}
+
+.favorites-container {
+    padding-left: 70px;
+    padding-right: 70px; 
+    padding-bottom: 70px; 
+}
+
+
+.favorites-introduce {
+    margin-left: 200px;
+    margin-right: 200px;
+    text-indent: 16px;
+    line-height: 1.3;
+    color: whitesmoke;
+    text-align: left;
+    font-size: 17px;
+    padding: 20px;
+    border-style: inset;
+    border-color: rgb(231, 216, 131);
+    box-shadow: 4px 5px 5px rgb(231, 216, 131);
+  
+}
+
+.favorites-introduce .introduce-title {
+    font-size: 25px;
+    color:rgb(231, 216, 131);
+    text-align: center;
+    line-height: 2;
+}
+
+/* Favorites List */
+.favorites-list {
+    margin: 32px -8px 0; 
+}
+
+.favorites-list-item {
+    float: left;
+    width: 33.333333%;
+    padding: 0 15px;
+}
+
+.favorites-list-item .item-title {
+    text-align: center;
+    font-size: 25px;
+    color: rgb(231, 216, 131);
+    padding-bottom: 10px;
+}
+.favorites-list-item .title-1 {
+    color: rgb(77, 185, 248);
+}
+.favorites-list-item .title-2 {
+    color: whitesmoke
+}
+
+
+.favorites-img {
+    width: 100%;
+    height:200px;
+    display: block;
+}
+
+.favorites-img:hover {
+    opacity: 0.7;
+}
+
+.favorites-list-body {
+    padding: 16px;
+    font-size: 15px;
+    background-color: whitesmoke;
+}
+
+.list-heading {
+    font-size: 20px;
+}
+.list-type {
+    margin-top: 15px;
+    color: grey;
+}
+.list-description {
+    margin-top: 15px;
+}
+.list-watch {
+    font-size: 18;
+    margin-top: 15px;
+    display: inline-block;
+    text-decoration: none; /* Xóa gạch chân */
+    color: whitesmoke;
+    background-color: rgb(51, 50, 50);
+    padding: 11px 16px;
+}
+.list-watch:hover {
+    color: rgb(51, 50, 50);
+    background-color: rgb(238, 198, 23);
+}
+
+/* END FAVORITES */
+/* BEGIN CONTACT */
+.contact-container {
+    padding: 0px 70px 70px 70px;
+    background-color: #111;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.mt-24 {
+    margin-top: 24px;
+}
+.col {
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.col-half {
+    width: 50%;
+}
+.col-full {
+    width: 100%;
+}
+
+.contact-content {
+    margin-top: 48px;
+}
+
+.contact-info {
+    width: 40%;
+    font-size: 20px;
+    line-height: 1.6;
+    color: whitesmoke;    
+}
+
+.contact-info i[class*="ti-"] {
+    display: inline-block;
+    width: 35px;   
+}
+
+.contact-info-express {
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    width: 60%;
+}
+.contact-form .form-control {
+    font-size: 20px;
+    width: 100%;
+    padding: 11px 20px;
+    font-family: "Bellota";
+    border-radius: 30px;
+    border-style: solid;
+    border-color: rgb(207, 178, 46);
+    color: whitesmoke;
+    background-color: rgb(32, 32, 32);
+}
+
+.submit-button {
+    margin-top: 32px;
+    font-size: 15px;
+    font-family: "Bellota";
+    line-height: 1.8;
+    padding: 11px 40px;
+    border-radius: 30px;
+    border-style: solid;
+    border-color: rgb(207, 178, 46);
+    color: whitesmoke;
+    background-color: #111;
+    cursor: pointer;
+}
+.submit-button:hover {
+    color: rgb(51, 50, 50);
+    background-color: rgb(238, 198, 23);
+}
+/* End CONTACT */
+/* BEGIN Ending IMG */
+#ending-img {
+    padding-top: 48px;
+    width: 100%;
+    height: 75vh;
+    background-image: url(/assets/img/end.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    display: flex;  
+    align-content: center; 
+    align-items:  center;
+}
+
+#ending-img .ending-text-content {
+    padding-left: 16%;
+    line-height: 1.4;
+    font-size: 100px;
+    color: white;
+    font-family: "Sweet Holiday";
+    text-align: center;
+    /* color: transparent;
+    background-image: url(https://media2.giphy.com/media/oB6KlAvOuaLtxYy8l4/giphy.gif?cid=ecf05e47ap1ktpfjfx1h3ib8r8j7gadcvvk55e602069efxr&rid=giphy.gif&ct=g);
+    background-position: center;
+    background-size: cover;
+    -webkit-background-clip: text; */    
+}
+#ending-img .text-3 {
+    color:rgb(238, 198, 23);
+    font-size: 120px;   
+}
+/* END Ending IMG */
+
+#footer {
+    text-align: center;
+    padding: 20px 16px;
+    background-color: #111;    
+}
+#footer .social-list a{
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(224, 221, 221);
+    padding: 0px 2px;
+}
+#footer .copy-right:hover,
+#footer .social-list a:hover {
+    color: rgb(155, 155, 155);
+}
+#footer .copy-right {
+    display: block;
+    font-size: large;
+    text-decoration: none;
+    color: rgb(224, 221, 221);
+    margin-top: 10px;
+}
